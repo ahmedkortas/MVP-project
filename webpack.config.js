@@ -1,5 +1,5 @@
 var path = require("path");
-var SRC_DIR = path.join(__dirname, "/public/component");
+var SRC_DIR = path.join(__dirname, "/client");
 var DIST_DIR = path.join(__dirname, "/public");
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
     path: DIST_DIR,
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: SRC_DIR,
