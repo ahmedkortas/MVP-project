@@ -19,25 +19,27 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="navbar">
-        <span className="logo" onClick={() => this.viewChange("home")}>
-          RBKAT
-        </span>
-        <span className="nav" onClick={() => this.viewChange("home")}>
-          home
-        </span>
-        <span className="nav" onClick={() => this.viewChange("adopt")}>
-          {" "}
-          adopt
-        </span>
-        <span className="nav" onClick={() => this.viewChange("putAdoption")}>
-          {" "}
-          put For adoption
-        </span>
-        <span className="nav" onClick={() => this.viewChange("singin")}>
-          {" "}
-          Sign Up/sign In
-        </span>
+      <div>
+        <div className="navbar">
+          <span className="logo" onClick={() => this.viewChange("home")}>
+            RBKAT
+          </span>
+          <span className="nav" onClick={() => this.viewChange("home")}>
+            home
+          </span>
+          <span className="nav" onClick={() => this.viewChange("adopt")}>
+            {" "}
+            adopt
+          </span>
+          <span className="nav" onClick={() => this.viewChange("putAdoption")}>
+            {" "}
+            put For adoption
+          </span>
+          <span className="nav" onClick={() => this.viewChange("singin")}>
+            {" "}
+            Sign Up/sign In
+          </span>
+        </div>
         <div className="main">
           {this.state.view === "home" ? (
             <div>home</div>
