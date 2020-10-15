@@ -1,3 +1,8 @@
 node_modules
 
+<<<<<<< HEAD
 public/bundle.js
+=======
+public/bundle.js
+
+>>>>>>> b19be2a06bf74efe4cfd99f0ba871603f074e065
