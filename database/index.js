@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost/Petfind';
+const mongoose = require("mongoose");
+const mongoUri = "mongodb://localhost/Petfind";
 
 const db = mongoose.connect(mongoUri);
 
