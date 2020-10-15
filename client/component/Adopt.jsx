@@ -8,11 +8,11 @@ class Adopt extends React.Component {
     this.state = { data: [] };
   }
   dataUpdated() {
-    if (this.state.data.length === 0) {
-      axios.get("/api/Pet").then((response) => {
+    axios.get("/api/Pet").then((response) => {
+      if (this.state.data.length !== response.data.length) {
         this.setState({ data: response.data });
-      });
-    }
+      }
+    });
   }
 
   render() {

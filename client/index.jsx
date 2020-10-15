@@ -9,7 +9,18 @@ class App extends React.Component {
     super(props);
     this.state = {
       view: "home",
+      currentUser: "",
+      currentUserPassword: "",
     };
+    this.login = this.login.bind(this);
+  }
+
+  login(name, password) {
+    this.setState({
+      currentUser: name,
+      currentUserPassword: password,
+      view: "adopt",
+    });
   }
 
   viewChange(options) {
@@ -44,7 +55,7 @@ class App extends React.Component {
           {this.state.view === "home" ? (
             <div>home</div>
           ) : this.state.view === "singin" ? (
-            <Signin />
+            <Signin login={this.login} />
           ) : this.state.view === "adopt" ? (
             <Adopt />
           ) : (
