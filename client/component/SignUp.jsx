@@ -5,11 +5,22 @@ import SignupF from "./SignupF.jsx";
 class Signin extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { view: "sign in" };
+    this.state = { view: true };
+    this.handle = this.handle.bind(this);
   }
+  handle() {
+    this.setState({ view: !this.state.view });
+  }
+
   render() {
     return (
-      <div>{this.state.view === "sign in" ? <SigninF /> : <SignupF />}</div>
+      <div>
+        {this.state.view === true ? (
+          <SigninF handle={this.handle} login={this.props.login} />
+        ) : (
+          <SignupF handle={this.handle} login={this.props.login} />
+        )}
+      </div>
     );
   }
 }

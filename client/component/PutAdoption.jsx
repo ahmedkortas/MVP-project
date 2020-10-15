@@ -17,8 +17,8 @@ class PutAdoption extends React.Component {
   }
   onChange(e) {
     e.preventDefault();
-    let x = e.target;
-    this.setState({ [x.name]: x.value });
+    let inp = e.target;
+    this.setState({ [inp.name]: inp.value });
   }
   clickHandler(e) {
     console.log(this.state);

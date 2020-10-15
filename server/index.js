@@ -4,6 +4,7 @@ let PORT = 3000;
 const pet = require("../database/Pet.js");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+let user = require("../database/User.js");
 
 app.use(express.static(__dirname + "/../public"));
 app.use(cors());
@@ -18,9 +19,28 @@ app.post("/api/Pet", function (req, res) {
   });
 });
 
+app.post("/api/user", (req, res) => {
+  let obj = req.body;
+  user.create(obj).then((user) => {
+    str = JSON.stringify(user);
+    res.send(str);
+  });
+});
+
 app.get("/api/Pet", (req, res) => {
   pet.findAll().then((data) => {
     res.send(data);
+  });
+});
+
+app.post("/api/login", (req, res) => {
+  console.log(req.body);
+  user.findUser(req.body).then((user) => {
+    if (user === null) {
+      res.send("does not exists");
+    } else {
+      res.send(user);
+    }
   });
 });
 
