@@ -8,8 +8,39 @@ class App extends React.Component {
       view: "home",
     };
   }
+
   render() {
-    return <h1>start working</h1>;
+    return (
+      <div className="navbar">
+        <span className="logo" onClick={() => this.changeView("home")}>
+          RBKAT
+        </span>
+        <span className="nav" onClick={() => this.changeView("home")}>
+          home
+        </span>
+        <span className="nav" onClick={() => this.changeView("adopt")}>
+          {" "}
+          adopt
+        </span>
+        <span className="nav" onClick={() => this.changeView("putAdoption")}>
+          {" "}
+          put For adoption
+        </span>
+        <span className="nav" onClick={() => this.changeView("singUp")}>
+          {" "}
+          Sign Up/sign In
+        </span>
+        <div className="main">
+          {this.state.view === "signUp" ? (
+            <sinUp />
+          ) : this.state.view === "putAdoption" ? (
+            <putAdoption />
+          ) : (
+            <adopt />
+          )}
+        </div>
+      </div>
+    );
   }
 }
 
