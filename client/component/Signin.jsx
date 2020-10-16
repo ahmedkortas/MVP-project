@@ -37,30 +37,29 @@ class SigninF extends React.Component {
   render() {
     return (
 
-    <div class="container">
-          <div class="col-md-6 mx-auto text-center">
-	         < div class="header-title">
-		             <h1 class="wv-heading--title">
-		                          Registration form
-	              	</h1>
-		<h4 class="wv-heading--subtitle">
-		  i love ahmed 
-		</h4>
-	 </div>
-  </div>
-
-  <div class="row">
+      <div class="container" style={{border:"1px solid black"}}>
+          <div class="row">
+                   <div class="col-md-5 mx-auto">
+                           <div id="first">
+            
+                              <div class="col-md-12 text-center">
+                                         <h1>Login</h1>
+                              </div>
+                            </div>
+                    </div>
+            </div>
         
         <Form>
           {" "}
           <Form.Group as={Row} controlId="formPlaintextEmail">
           <Form.Label htmlFor="email">Email :</Form.Label>
-          <Col col-md-auto >
+          <Col col-md-12 text-center > 
           <Form.Control
             type="email"
             name="email"
             placeholder="name"
             onChange={this.onChange}
+            style ={{width:'50%'}}
           />
            </Col>  
              </Form.Group>
@@ -68,12 +67,14 @@ class SigninF extends React.Component {
           <Form.Group as={Row} controlId="formPlaintextPassword">
 
           <Form.Label  htmlFor="password">Password :</Form.Label>
-          <Col col-md-auto >
+          <Col  col-md-12 text-center >
           <Form.Control
             type="password"
             name="password"
             placeholder="password"
             onChange={this.onChange}
+            style ={{width:'50%'}}
+
           />
           </Col>
           </Form.Group>
@@ -86,7 +87,7 @@ class SigninF extends React.Component {
           <Button  variant="primary" type="submit" onClick={this.clickHandler}>Login</Button>
         </Form>
       </div>
-     </div>
+    
     );
   }
 }

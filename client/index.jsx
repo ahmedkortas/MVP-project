@@ -14,7 +14,7 @@ class App extends React.Component {
     };
     this.login = this.login.bind(this);
   }
-
+ 
   login(email) {
     let userName = localStorage.getItem("currentUser");
     if (userName === "undefined" || userName === null) {
@@ -45,63 +45,96 @@ class App extends React.Component {
   }
 
   render() {
+
+    const styleNav = {
+      margin: "0px",
+      padding: "5px",
+      display: "flex",
+      justifyContent: "flex-end",
+      alignItems: "center",
+      color:"black",
+      fontFamily:"Times New Roman",
+
+      
+    };
+     const navSelected ={
+      padding: '5px',
+      color: 'chartreuse',
+      fontWeight: 'bold',
+      marginRight: '5px',
+      fontSize: '1.1em'
+    };
+    
+    const navUnselected={
+      padding: "5px",
+      marginRight: "5px",
+      fontSize: "1.1em"
+    }
+
     this.login();
     return (
       <div>
-        <div className="navbar navbar-dark bg-dark " style={{}}> 
-          <span className="logo" onClick={() => this.viewChange("home")}>
-            <Img src="logo.png" > </Img>
-          </span>
+        
+        <div className="navbar navbar-light" > 
+          <img
+          src={"./logo.png"} 
+          onClick={()=>this.viewChange("home")}  
+          style={{witdh:"70px" , height:"70px"}}
+          />
+
           <span
-            className={
-              this.state.view === "home" ? "nav-selected" : "nav-unselected"
+            style={
+              this.state.view === "home" ? navSelected:navUnselected
             }
             onClick={() => this.viewChange("home")}
           >
             Home
           </span>
           <span
-            className={
-              this.state.view === "adopt" ? "nav-selected" : "nav-unselected"
+            style={
+              this.state.view === "adopt" ? navSelected : navUnselected
             }
-            onClick={() => this.viewChange("adopt")}
+            onClick={() => this.viewChange("adopt")} 
           >
             {" "}
-            adopt
+            Adopt
+            
           </span>
           <span
-            className={
+            style={
               this.state.view === "putAdoption"
-                ? "nav-selected"
-                : "nav-unselected"
+                ? navSelected
+                : navUnselected
             }
             onClick={() => this.viewChange("putAdoption")}
           >
             {" "}
             put For adoption
           </span>
-          <Form className="form-inline my-2 my-lg-0">
-             <Form.Control className="form-control mr-sm-2" type="search" placeholder="Search"/>
-                <Button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</Button>
-          </Form>
+        
           {this.state.currentUser === "" ? (
             <span
-              className={
-                this.state.view === "singin" ? "nav-selected" : "nav-unselected"
+              style={
+                this.state.view === "singin" ?navSelected
+                : navUnselected
               }
               onClick={() => this.viewChange("singin")}
             >
               {" "}
-              Sign Up/sign In
+              Log In
             </span>
           ) : (
-            <span className="nav" onClick={() => this.viewChange("logout")}>
+            <span className="nav" onClick={() => this.viewChange("logout")}  style= {styleNav}>
               {" "}
               logOut
             </span>
           )}
+            <Form className="form-inline my-2 my-lg-0"  >
+            <Form.Control className="form-control mr-sm-2" type="search" placeholder="Search"/>
+            <Button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</Button>
+            </Form>
         </div>
-        <div className="main">
+        <div className="main" >
           {this.state.view === "home" ? (
             <div>home</div>
           ) : this.state.view === "singin" ? (
