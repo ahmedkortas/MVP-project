@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {Form , Button} from "react-bootstrap"
+import { Form, Button } from "react-bootstrap";
 class PutAdoption extends React.Component {
   constructor(props) {
     super(props);
@@ -35,47 +35,57 @@ class PutAdoption extends React.Component {
   render() {
     return (
       <div>
-      <Form onChange={this.onChange}>
-        <Form.label htmlFor="name">The animal name</Form.label>
-        <br></br>
-        <br></br>
-        <Form.Control type="text" name="name" />
-        <br></br>
-        <Form.label htmlFor="ownerName">The owner name</Form.label >
-        <br></br>
-        <Form.Control  type="text" placeholder="your name" name="ownerName"/>
-        <br></br>
-        <Form.label  htmlFor="image">image</Form.label >
-        <br></br>
-        <Form.Control type="text" placeholder="image url" name="imageUrl"/>
-        <br></br>
-        <Form.label  htmlFor="description">description</Form.label >
-        <br></br>
-        <Form.Control
-          htmlFor="description"
-          cols={50}
-          rows={10}
-          placeholder="description"
-          name="description"
-        />
-        <br></br>
-        <Form.label htmlFor="race">race</Form.label>
-        <br></br>
-        <Form.Control
-          htmlFor="race"
-          name="race"
-          placeholder="race"
-          type="text"
-        />
-        <br></br>
-        <Form.label htmlFor="age">age</Form.label>
-        <br></br>
-        <Form.Control htmlFor="age" name="age" placeholder="age" type="number"/>
-        <br></br>
-        <Button variant="success" htmlFor="submit" type="submit" onClick={this.clickHandler}>
-          Submit
-        </Button>
-      </Form>
+        <Form onChange={this.onChange}>
+          <Form.Label htmlFor="name">The animal name</Form.Label>
+          <br></br>
+          <br></br>
+          <Form.Control type="text" name="name" />
+          <br></br>
+          <Form.Label htmlFor="ownerName">The owner name</Form.Label>
+          <br></br>
+          <Form.Control type="text" placeholder="your name" name="ownerName" />
+          <br></br>
+          <Form.Label htmlFor="image">image</Form.Label>
+          <br></br>
+          <Form.Control type="text" placeholder="image url" name="imageUrl" />
+          <br></br>
+          <Form.Label htmlFor="description">description</Form.Label>
+          <br></br>
+          <Form.Control
+            htmlFor="description"
+            cols={50}
+            rows={10}
+            placeholder="description"
+            name="description"
+          />
+          <br></br>
+          <Form.Label htmlFor="race">race</Form.Label>
+          <br></br>
+          <Form.Control
+            htmlFor="race"
+            name="race"
+            placeholder="race"
+            type="text"
+          />
+          <br></br>
+          <Form.Label htmlFor="age">age</Form.Label>
+          <br></br>
+          <Form.Control
+            htmlFor="age"
+            name="age"
+            placeholder="age"
+            type="number"
+          />
+          <br></br>
+          <Button
+            variant="success"
+            htmlFor="submit"
+            type="submit"
+            onClick={this.clickHandler}
+          >
+            Submit
+          </Button>
+        </Form>
       </div>
     );
   }
