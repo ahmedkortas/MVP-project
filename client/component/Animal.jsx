@@ -16,8 +16,8 @@ class Animal extends React.Component {
    // );
    
       return(<div>
-      <Card className="mb-3" style={{ color :"#808080" ,marginButton:"15px"}}>
-      <Card.Img src={data.imageUrl} style={{ width: "600px", padding: "2px" ,height:"300px" ,thumbnail,
+      <Card className="mb-3" style={{ color :"#808080" ,marginButton:"15px" , width: '18rem'}}  >
+      <Card.Img src={data.imageUrl} style={{ width: "18rem", padding: "2px" ,height:"18rem" ,
        backgroundColor:"aliceblue",border: '2px solid black' }}/> 
       <Card.Body> 
       <Card.Title> my name:{data.name} </Card.Title>

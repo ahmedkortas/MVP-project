@@ -47,7 +47,7 @@ class SigninF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
-          <label htmlFor="password">password</label>
+          <Form.Label htmlFor="password">password</Form.Label>
           <Form.Control
             type="password"
             name="password"

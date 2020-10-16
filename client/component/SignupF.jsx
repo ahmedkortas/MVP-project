@@ -44,54 +44,53 @@ class SignupF extends React.Component {
     return (
       <div>
         <Form>
-          {" "}
-          <Form.label  htmlFor="fname">firstName</Form.label >
-          <Form.Control 
+          <Form.Label htmlFor="fname">firstName</Form.Label>
+          <Form.Control
             type="text"
             name="firstName"
             placeholder="name"
             onChange={this.onChange}
           />
           <br></br>
-          <Form.label htmlFor="Sname">secondName</Form.label >
+          <Form.Label htmlFor="Sname">secondName</Form.Label>
           <br></br>
-          <Form.Control 
+          <Form.Control
             type="text"
             name="secondName"
             placeholder="name"
             onChange={this.onChange}
           />
           <br></br>
-          <Form.label  htmlFor="password">password</Form.label >
+          <Form.Label htmlFor="password">password</Form.Label>
           <br></br>
-          <Form.Control 
+          <Form.Control
             type="password"
             name="password"
             placeholder="password"
             onChange={this.onChange}
           />
           <br></br>
-          <Form.label  htmlFor="adress">adress</Form.label >
+          <Form.Label htmlFor="adress">adress</Form.Label>
           <br></br>
-          <Form.Control 
+          <Form.Control
             type="text"
             name="adress"
             placeholder="adress"
             onChange={this.onChange}
           />
           <br></br>
-          <Form.label  htmlFor="email">email</Form.label >
+          <Form.Label htmlFor="email">email</Form.Label>
           <br></br>
-          <Form.Control 
+          <Form.Control
             type="email"
             name="email"
             placeholder="email"
             onChange={this.onChange}
           />
           <br></br>
-          <Form.label  htmlFor="birthday">birthday</Form.label >
+          <Form.Label htmlFor="birthday">birthday</Form.Label>
           <br></br>
-          <Form.Control 
+          <Form.Control
             type="date"
             name="birthday"
             placeholder="dd-mm-yyyy"
@@ -100,18 +99,18 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
-          <Form.label  htmlFor="cardNumber">cardNumber</Form.label >
+          <Form.Label htmlFor="cardNumber">cardNumber</Form.Label>
           <br></br>
-          <Form.Control 
+          <Form.Control
             type="number"
             name="cardNumber"
             placeholder="cardNumber"
             onChange={this.onChange}
           />
           <br></br>
-          <Form.label htmlFor="PhoneNumber">PhoneNumber</Form.label >
+          <Form.Label htmlFor="PhoneNumber">PhoneNumber</Form.Label>
           <br></br>
-          <Form.Control 
+          <Form.Control
             type="number"
             name="PhoneNumber"
             placeholder="PhoneNumber"
