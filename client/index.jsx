@@ -50,9 +50,12 @@ class App extends React.Component {
     return (
       <div>
         <div className="navbar">
-          <span className="logo" onClick={() => this.viewChange("home")}>
-            RBKAT
-          </span>
+          <img
+            src={"./logo.png"}
+            onClick={() => this.viewChange("home")}
+            style={{ width: "10%" }}
+          />
+
           <span
             className={
               this.state.view === "home" ? "nav-selected" : "nav-unselected"
