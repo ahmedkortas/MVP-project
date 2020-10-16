@@ -45,8 +45,8 @@ class SignupF extends React.Component {
       <div>
         <Form>
           {" "}
-          <label htmlFor="fname">firstName</label>
-          <input
+          <Form.label  htmlFor="fname">firstName</Form.label >
+          <Form.Control 
             type="text"
             name="firstName"
             placeholder="name"
