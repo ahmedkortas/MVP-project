@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {Form , Button} from "react-bootstrap"
+import { Form, Button } from "react-bootstrap";
 class PutAdoption extends React.Component {
   constructor(props) {
     super(props);
@@ -35,6 +35,7 @@ class PutAdoption extends React.Component {
   render() {
     return (
       <div>
+
       <Form onChange={this.onChange}>
         <Form.Label htmlFor="name">The animal name</Form.Label>
         <br></br>
@@ -76,6 +77,7 @@ class PutAdoption extends React.Component {
           Submit
         </Button>
       </Form>
+
       </div>
     );
   }

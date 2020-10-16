@@ -3,7 +3,12 @@ import ReactDOM from "react-dom";
 import Signin from "./component/SignUp.jsx";
 import Adopt from "./component/Adopt.jsx";
 import PutAdoption from "./component/PutAdoption.jsx";
+
 import { Button, Form,Img } from "react-bootstrap";
+
+import items from "./links";
+import Home from "./component/Home.jsx";
+
 
 class App extends React.Component {
   constructor(props) {
@@ -136,7 +141,9 @@ class App extends React.Component {
         </div>
         <div className="main" >
           {this.state.view === "home" ? (
-            <div>home</div>
+            <div>
+              <Home items={items} />
+            </div>
           ) : this.state.view === "singin" ? (
             <Signin login={this.login} />
           ) : this.state.view === "adopt" ? (
