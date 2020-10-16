@@ -7,10 +7,10 @@ class Animal extends React.Component {
   render() {
     let data = this.props.data;
     return (
-      <div>
+      <div className="card">
         {console.log(this.props)}
         <span>my name:{data.name}</span>
-        <img src={data.imageUrl} style={{ width: "10%" }}></img>
+        <img src={data.imageUrl} style={{ width: "50%" }}></img>
       </div>
     );
   }
