@@ -54,6 +54,7 @@ class App extends React.Component {
       alignItems: "center",
       color:"black",
       fontFamily:"Times New Roman",
+
       
     };
      const navSelected ={
@@ -73,6 +74,7 @@ class App extends React.Component {
     this.login();
     return (
       <div>
+        
         <div className="navbar navbar-light" > 
           <img
           src={"./logo.png"} 
