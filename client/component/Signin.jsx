@@ -15,14 +15,14 @@ class SigninF extends React.Component {
   clickHandler(e) {
     e.preventDefault();
     axios.post("/api/login", this.state).then((res) => {
-      console.log(res.data);
       if (res.data === "does not exists") {
         alert("this user does not exist");
       } else {
         if (res.data.password !== this.state.password) {
           alert("wrong password");
         } else {
-          this.props.login(res.data.name, res.data.password);
+          console.log(res.data.email);
+          this.props.login(res.data.email);
         }
       }
     });

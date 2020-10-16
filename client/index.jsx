@@ -10,28 +10,51 @@ class App extends React.Component {
     this.state = {
       view: "home",
       currentUser: "",
-      currentUserPassword: "",
     };
     this.login = this.login.bind(this);
   }
 
-  login(name, password) {
-    this.setState({
-      currentUser: name,
-      currentUserPassword: password,
-      view: "adopt",
-    });
+  login(email) {
+    if (
+      localStorage.getItem("currentUser") === "undefined" ||
+      localStorage.getItem("currentUser") === null
+    ) {
+      if (email === undefined) {
+        return;
+      } else {
+        let userName = localStorage.getItem("currentUser");
+        localStorage.setItem("currentUser", email);
+
+        this.setState({
+          currentUser: userName,
+          view: "adopt",
+        });
+      }
+    } else {
+      this.setState({
+        currentUser: localStorage.setItem("currentUser", email),
+        view: "adopt",
+      });
+    }
   }
 
   viewChange(options) {
     if (options === "logout") {
-      this.setState({ currentUser: "", currentUserPassword: "" });
+      this.setState({ currentUser: "" });
+      localStorage.clear();
     } else {
       this.setState({ view: options });
     }
   }
 
+  // localStorageLogin() {
+  //   if (localStorage.getItem("currentUser") === null) {
+  //     console.log("local storage is empty");
+  //   }
+  // }
+
   render() {
+    this.login();
     return (
       <div>
         <div className="navbar">
