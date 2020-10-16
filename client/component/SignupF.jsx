@@ -41,26 +41,61 @@ class SignupF extends React.Component {
   }
 
   render() {
+    const styleForm ={
+      border:"1px solid rgba(0, 0, 0, 0.25);" ,
+      backgroundColor: "rgba(255, 255, 255, 0.5);",
+      padding: "10px;",
+      maxWidth: "100px;",
+      margin: "0 auto;",
+      textAlign: "center;",
+      height: "100px;",
+      lineHeight: "50px;",
+      display: "inline;",
+      width:'50%'
+    }
+    const buttonForm ={
+      marginRight:"5px;" ,
+      padding: "10px;",
+      fontSize:" 1em;", 
+      display: "block;",
+      position: "relative;",
+      marginLeft:"auto;" ,
+      marginRight: "auto;"
+    }
     return (
       <div>
-        <Form>
-          <Form.Label htmlFor="fname">firstName</Form.Label>
-          <Form.Control
+        <Form className="form-1" style ={styleForm}> 
+        <div class="row">
+          <div class="col-xs-12 col-md-offset-3">
+              <div class="col-md-12">
+           
+          <Form.Label htmlFor="fname" className="needs-validation" novalidate>firstName</Form.Label>
+          <Form.Control style ={styleForm}
             type="text"
             name="firstName"
             placeholder="name"
             onChange={this.onChange}
-          />
+          /> 
           <br></br>
+         </div>
+        </div>
+          <div class="col-xs-12 col-md-offset-3">
+              <div class="col-md-12">
           <Form.Label htmlFor="Sname">secondName</Form.Label>
           <br></br>
-          <Form.Control
+          <Form.Control 
+            style ={styleForm}
             type="text"
             name="secondName"
             placeholder="name"
             onChange={this.onChange}
           />
+          </div>
+          </div>
+       
           <br></br>
+          <div class="col-xs-12 col-md-offset-3">
+              <div class="col-md-12">
           <Form.Label htmlFor="password">password</Form.Label>
           <br></br>
           <Form.Control
@@ -68,10 +103,16 @@ class SignupF extends React.Component {
             name="password"
             placeholder="password"
             onChange={this.onChange}
-          />
-          <br></br>
+          /> <br></br>
+          </div>
+          </div>
+          </div>
+      <div class="row">
+          <div class="col-xs-12 col-md-offset-3">
+              <div class="col-md-12">
           <Form.Label htmlFor="adress">adress</Form.Label>
           <br></br>
+        
           <Form.Control
             type="text"
             name="adress"
@@ -79,6 +120,10 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
+           </div>
+           </div>
+        <div class="col-xs-12 col-md-offset-3">
+        <div class="col-md-12">
           <Form.Label htmlFor="email">email</Form.Label>
           <br></br>
           <Form.Control
@@ -88,17 +133,25 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
+           </div>
+           </div>
+           <div class="col-xs-12 col-md-offset-3">
+           <div class="col-md-12">
           <Form.Label htmlFor="birthday">birthday</Form.Label>
           <br></br>
           <Form.Control
             type="date"
             name="birthday"
-            placeholder="dd-mm-yyyy"
-            min="1997-01-01"
             max="2030-12-31"
             onChange={this.onChange}
           />
           <br></br>
+         </div>
+         </div>
+</div>
+<div class="row">
+          <div class="col-xs-12 col-md-offset-3">
+              <div class="col-md-12">
           <Form.Label htmlFor="cardNumber">cardNumber</Form.Label>
           <br></br>
           <Form.Control
@@ -107,9 +160,14 @@ class SignupF extends React.Component {
             placeholder="cardNumber"
             onChange={this.onChange}
           />
+          </div>
+          </div>
           <br></br>
+          <div class="col-xs-12 col-md-offset-3">
+          <div class="col-md-12">
           <Form.Label htmlFor="PhoneNumber">PhoneNumber</Form.Label>
           <br></br>
+       
           <Form.Control
             type="number"
             name="PhoneNumber"
@@ -117,11 +175,16 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
-          <Button type="submit" onClick={this.clickHandler}>
+         </div> 
+         </div>
+         </div>
+          <Button type="submit" onClick={this.clickHandler} style ={buttonForm}>
             Sign Up
           </Button>
         </Form>
-      </div>
+
+</div>
+
     );
   }
 }

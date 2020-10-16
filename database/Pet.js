@@ -21,6 +21,7 @@ const adoptedPetSchema = new mongoose.Schema({
   race: String,
   age: Number,
   newOwnerEmail: String,
+  email: String,
 });
 
 let AdoptedPet = mongoose.model("adoptedPet", adoptedPetSchema);
