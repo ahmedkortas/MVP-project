@@ -1,6 +1,8 @@
 import React from "react";
+
 import axios from "axios";
-import { Card, Button } from "react-bootstrap";
+
+import { Card, Button, CardDeck } from "react-bootstrap";
 
 class Animal extends React.Component {
   constructor(props) {
@@ -20,6 +22,7 @@ class Animal extends React.Component {
 
   render() {
     let data = this.props.data;
+
     // return (
     //    <div className="card">
     //      {console.log(this.props)}
@@ -36,7 +39,7 @@ class Animal extends React.Component {
         >
           <Card.Img
             src={data.imageUrl}
-            style={{ width: "600px", padding: "2px", height: "300px" }}
+            style={{ width: "400px", padding: "2px", height: "300px" }}
           />
           <Card.Body>
             <Card.Title> my name:{data.name} </Card.Title>

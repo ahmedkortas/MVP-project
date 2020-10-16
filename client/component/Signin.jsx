@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form ,Row, Col} from "react-bootstrap";
 
 class SigninF extends React.Component {
   constructor(props) {
@@ -36,32 +36,58 @@ class SigninF extends React.Component {
 
   render() {
     return (
-      <div>
+
+      <div class="container" style={{border:"1px solid black"}}>
+          <div class="row">
+                   <div class="col-md-5 mx-auto">
+                           <div id="first">
+            
+                              <div class="col-md-12 text-center">
+                                         <h1>Login</h1>
+                              </div>
+                            </div>
+                    </div>
+            </div>
+        
         <Form>
           {" "}
-          <Form.Label htmlFor="email"> email :</Form.Label>
+          <Form.Group as={Row} controlId="formPlaintextEmail">
+          <Form.Label htmlFor="email">Email :</Form.Label>
+          <Col col-md-12 text-center > 
           <Form.Control
             type="email"
             name="email"
             placeholder="name"
             onChange={this.onChange}
+            style ={{width:'50%'}}
           />
+           </Col>  
+             </Form.Group>
           <br></br>
-          <Form.Label htmlFor="password">password</Form.Label>
+          <Form.Group as={Row} controlId="formPlaintextPassword">
+
+          <Form.Label  htmlFor="password">Password :</Form.Label>
+          <Col  col-md-12 text-center >
           <Form.Control
             type="password"
             name="password"
             placeholder="password"
             onChange={this.onChange}
+            style ={{width:'50%'}}
+
           />
+          </Col>
+          </Form.Group>
           <br></br>
-          <a href="#" onClick={this.props.handle}>
+  
+            <a href="#" onClick={this.props.handle}>
             Not yet an account? sign up
           </a>
           <br></br>
-          <Button onClick={this.clickHandler}>Login</Button>
+          <Button  variant="primary" type="submit" onClick={this.clickHandler}>Login</Button>
         </Form>
       </div>
+    
     );
   }
 }
