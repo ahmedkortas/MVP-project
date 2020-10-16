@@ -5,6 +5,8 @@ const pet = require("../database/Pet.js");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 let user = require("../database/User.js");
+const nodemailer = require("nodemailer");
+var smtpTransport = require("nodemailer-smtp-transport");
 
 app.use(express.static(__dirname + "/../public"));
 app.use(cors());
@@ -30,7 +32,30 @@ app.post("/api/user", (req, res) => {
 app.post("/api/adoption", (req, res) => {
   console.log(req.body);
   pet.findAndChange(req.body).then((obj) => {
-    res.send(obj);
+    nodemailer.createTestAccount((err, email) => {
+      var transporter = nodemailer.createTransport(
+        smtpTransport({
+          service: "gmail",
+          host: "smtp.gmail.com",
+          auth: {
+            user: "adoptanimalstn@gmail.com",
+            pass: "258456357159Adopt",
+          },
+        })
+      );
+      let mailOptions = {
+        from: "adoptanimalstn@gmail.com",
+        to: `${req.body.email}`,
+        submit: "test",
+        text: "hey",
+      };
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.log(err);
+        }
+        res.send(info);
+      });
+    });
   });
 });
 
