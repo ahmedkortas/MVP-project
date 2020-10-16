@@ -43,15 +43,21 @@ class SignupF extends React.Component {
   render() {
     return (
       <div>
-        <Form>
-          <Form.Label htmlFor="fname">firstName</Form.Label>
+        <Form className="form-row"> 
+          <div  className= "col-md-8" >
+           
+          <Form.Label htmlFor="fname" className="needs-validation" novalidate>firstName</Form.Label>
           <Form.Control
             type="text"
             name="firstName"
             placeholder="name"
             onChange={this.onChange}
           />
+         
+
+
           <br></br>
+        
           <Form.Label htmlFor="Sname">secondName</Form.Label>
           <br></br>
           <Form.Control
@@ -60,7 +66,9 @@ class SignupF extends React.Component {
             placeholder="name"
             onChange={this.onChange}
           />
+          
           <br></br>
+          
           <Form.Label htmlFor="password">password</Form.Label>
           <br></br>
           <Form.Control
@@ -69,9 +77,15 @@ class SignupF extends React.Component {
             placeholder="password"
             onChange={this.onChange}
           />
+         
           <br></br>
+          </div>
+           <div className="col-md-8" >
+          
           <Form.Label htmlFor="adress">adress</Form.Label>
           <br></br>
+         
+         
           <Form.Control
             type="text"
             name="adress"
@@ -79,6 +93,7 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
+        
           <Form.Label htmlFor="email">email</Form.Label>
           <br></br>
           <Form.Control
@@ -88,6 +103,11 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
+          </div>
+         
+          <div className="col-md-8">
+         
+
           <Form.Label htmlFor="birthday">birthday</Form.Label>
           <br></br>
           <Form.Control
@@ -99,6 +119,7 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
+         
           <Form.Label htmlFor="cardNumber">cardNumber</Form.Label>
           <br></br>
           <Form.Control
@@ -108,8 +129,10 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
+         
           <Form.Label htmlFor="PhoneNumber">PhoneNumber</Form.Label>
           <br></br>
+       
           <Form.Control
             type="number"
             name="PhoneNumber"
@@ -117,11 +140,14 @@ class SignupF extends React.Component {
             onChange={this.onChange}
           />
           <br></br>
+       </div>
+
           <Button type="submit" onClick={this.clickHandler}>
             Sign Up
           </Button>
         </Form>
       </div>
+      
     );
   }
 }
