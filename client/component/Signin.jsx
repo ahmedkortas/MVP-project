@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Button, Form } from "react-bootstrap";
 
 class SigninF extends React.Component {
   constructor(props) {
@@ -36,30 +37,30 @@ class SigninF extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <Form>
           {" "}
-          <label htmlFor="email">email :</label>
-          <input
+          <Form.Label htmlFor="email"> email :</Form.Label>
+          <Form.Control
             type="email"
             name="email"
             placeholder="name"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
           <label htmlFor="password">password</label>
-          <input
+          <Form.Control
             type="password"
             name="password"
             placeholder="password"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
           <a href="#" onClick={this.props.handle}>
             Not yet an account? sign up
           </a>
           <br></br>
-          <button onClick={this.clickHandler}>Login</button>
-        </form>
+          <Button onClick={this.clickHandler}>Login</Button>
+        </Form>
       </div>
     );
   }

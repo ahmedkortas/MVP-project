@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import {Form , Button} from "react-bootstrap"
 class PutAdoption extends React.Component {
   constructor(props) {
     super(props);
@@ -34,47 +34,49 @@ class PutAdoption extends React.Component {
   }
   render() {
     return (
-      <form onChange={this.onChange}>
-        <label htmlFor="name">The animal name</label>
+      <div>
+      <Form onChange={this.onChange}>
+        <Form.label htmlFor="name">The animal name</Form.label>
         <br></br>
         <br></br>
-        <input type="text" name="name"></input>
+        <Form.Control type="text" name="name" />
         <br></br>
-        <label htmlFor="ownerName">The owner name</label>
+        <Form.label htmlFor="ownerName">The owner name</Form.label >
         <br></br>
-        <input type="text" placeholder="your name" name="ownerName"></input>
+        <Form.Control  type="text" placeholder="your name" name="ownerName"/>
         <br></br>
-        <label htmlFor="image">image</label>
+        <Form.label  htmlFor="image">image</Form.label >
         <br></br>
-        <input type="text" placeholder="image url" name="imageUrl"></input>
+        <Form.Control type="text" placeholder="image url" name="imageUrl"/>
         <br></br>
-        <label htmlFor="description">description</label>
+        <Form.label  htmlFor="description">description</Form.label >
         <br></br>
-        <textarea
+        <Form.Control
           htmlFor="description"
           cols={50}
           rows={10}
           placeholder="description"
           name="description"
-        ></textarea>
+        />
         <br></br>
-        <label htmlFor="race">race</label>
+        <Form.label htmlFor="race">race</Form.label>
         <br></br>
-        <input
+        <Form.Control
           htmlFor="race"
           name="race"
           placeholder="race"
           type="text"
-        ></input>
+        />
         <br></br>
-        <label htmlFor="age">age</label>
+        <Form.label htmlFor="age">age</Form.label>
         <br></br>
-        <input htmlFor="age" name="age" placeholder="age" type="number"></input>
+        <Form.Control htmlFor="age" name="age" placeholder="age" type="number"/>
         <br></br>
-        <button htmlFor="submit" type="submit" onClick={this.clickHandler}>
+        <Button variant="success" htmlFor="submit" type="submit" onClick={this.clickHandler}>
           Submit
-        </button>
-      </form>
+        </Button>
+      </Form>
+      </div>
     );
   }
 }
