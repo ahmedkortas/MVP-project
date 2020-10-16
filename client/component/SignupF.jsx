@@ -30,7 +30,7 @@ class SignupF extends React.Component {
       if (res === "exists") {
         alert("user exists");
       } else {
-        this.props.login(res.firstName, res.password);
+        this.props.login(res.data.email);
       }
     });
     e.preventDefault();
@@ -45,9 +45,8 @@ class SignupF extends React.Component {
       <div>
         <Form>
           {" "}
-          <Form.label htmlFor="fname">firstName </Form.label >
-          <br>{console.log(this.props.login)}</br>
-          <Form.Control 
+          <label htmlFor="fname">firstName</label>
+          <input
             type="text"
             name="firstName"
             placeholder="name"
