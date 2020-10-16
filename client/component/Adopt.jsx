@@ -18,7 +18,7 @@ class Adopt extends React.Component {
   render() {
     this.dataUpdated();
     return (
-      <div>
+      <div className="container">
         {this.state.data.map((element, index) => (
           <Animal key={index} data={element} />
         ))}

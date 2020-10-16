@@ -24,8 +24,11 @@ class App extends React.Component {
   }
 
   viewChange(options) {
-    console.log(options);
-    this.setState({ view: options });
+    if (options === "logout") {
+      this.setState({ currentUser: "", currentUserPassword: "" });
+    } else {
+      this.setState({ view: options });
+    }
   }
 
   render() {
@@ -35,21 +38,50 @@ class App extends React.Component {
           <span className="logo" onClick={() => this.viewChange("home")}>
             RBKAT
           </span>
-          <span className="nav" onClick={() => this.viewChange("home")}>
+          <span
+            className={
+              this.state.view === "home" ? "nav-selected" : "nav-unselected"
+            }
+            onClick={() => this.viewChange("home")}
+          >
             home
           </span>
-          <span className="nav" onClick={() => this.viewChange("adopt")}>
+          <span
+            className={
+              this.state.view === "adopt" ? "nav-selected" : "nav-unselected"
+            }
+            onClick={() => this.viewChange("adopt")}
+          >
             {" "}
             adopt
           </span>
-          <span className="nav" onClick={() => this.viewChange("putAdoption")}>
+          <span
+            className={
+              this.state.view === "putAdoption"
+                ? "nav-selected"
+                : "nav-unselected"
+            }
+            onClick={() => this.viewChange("putAdoption")}
+          >
             {" "}
             put For adoption
           </span>
-          <span className="nav" onClick={() => this.viewChange("singin")}>
-            {" "}
-            Sign Up/sign In
-          </span>
+          {this.state.currentUser === "" ? (
+            <span
+              className={
+                this.state.view === "singin" ? "nav-selected" : "nav-unselected"
+              }
+              onClick={() => this.viewChange("singin")}
+            >
+              {" "}
+              Sign Up/sign In
+            </span>
+          ) : (
+            <span className="nav" onClick={() => this.viewChange("logout")}>
+              {" "}
+              logOut
+            </span>
+          )}
         </div>
         <div className="main">
           {this.state.view === "home" ? (
