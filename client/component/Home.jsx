@@ -23,10 +23,21 @@ class Home extends React.Component {
     this.slide();
     let item = this.props.items.items;
     return (
-      <img
-        src={item[this.state.i]}
-        style={{ width: "100%", position: "fixed" }}
-      />
+      <div>
+        <img
+          src={item[this.state.i]}
+          style={{ width: "60%", height: "100%", position: "fixed" }}
+        />
+        <div style={{ width: "40%", float: "right", padding: "70px" }}>
+          <p>
+            This website only goal is to save as many animals as possible. We
+            try to find good shelter and a loving family for our pets and a life
+            companion for you. Help us help these animals, and help us help you
+            to find a faithful partner for life. We believe in your empathy, we
+            believe that you will make the right choice, we believe in you.
+          </p>
+        </div>
+      </div>
     );
   }
 }
