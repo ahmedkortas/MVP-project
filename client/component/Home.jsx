@@ -16,7 +16,7 @@ class Home extends React.Component {
       } else {
         this.setState({ i: 0 });
       }
-    }, 2500);
+    }, 3500);
   }
 
   render() {

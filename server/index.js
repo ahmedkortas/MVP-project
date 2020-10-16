@@ -27,6 +27,13 @@ app.post("/api/user", (req, res) => {
   });
 });
 
+app.post("/api/adoption", (req, res) => {
+  console.log(req.body);
+  pet.findAndChange(req.body).then((obj) => {
+    res.send(obj);
+  });
+});
+
 app.get("/api/Pet", (req, res) => {
   pet.findAll().then((data) => {
     res.send(data);
