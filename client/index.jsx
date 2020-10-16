@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Signin from "./component/SignUp.jsx";
 import Adopt from "./component/Adopt.jsx";
 import PutAdoption from "./component/PutAdoption.jsx";
+import { Button, Form,Img } from "react-bootstrap";
 
 class App extends React.Component {
   constructor(props) {
@@ -47,9 +48,9 @@ class App extends React.Component {
     this.login();
     return (
       <div>
-        <div className="navbar">
+        <div className="navbar navbar-dark bg-dark " style={{}}> 
           <span className="logo" onClick={() => this.viewChange("home")}>
-            RBKAT
+            <Img src="logo.png" > </Img>
           </span>
           <span
             className={
@@ -57,7 +58,7 @@ class App extends React.Component {
             }
             onClick={() => this.viewChange("home")}
           >
-            home
+            Home
           </span>
           <span
             className={
@@ -79,6 +80,10 @@ class App extends React.Component {
             {" "}
             put For adoption
           </span>
+          <Form className="form-inline my-2 my-lg-0">
+             <Form.Control className="form-control mr-sm-2" type="search" placeholder="Search"/>
+                <Button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</Button>
+          </Form>
           {this.state.currentUser === "" ? (
             <span
               className={

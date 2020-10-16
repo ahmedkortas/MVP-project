@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Animal from "./Animal.jsx";
-
+import { Card ,Button, CardDeck} from "react-bootstrap";
 class Adopt extends React.Component {
   constructor(props) {
     super(props);
@@ -18,10 +18,14 @@ class Adopt extends React.Component {
   render() {
     this.dataUpdated();
     return (
-      <div className="container">
+      <div>
+       <CardDeck>
         {this.state.data.map((element, index) => (
+         
           <Animal key={index} data={element} />
+         
         ))}
+        </CardDeck>
       </div>
     );
   }

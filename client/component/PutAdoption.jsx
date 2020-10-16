@@ -36,20 +36,20 @@ class PutAdoption extends React.Component {
     return (
       <div>
       <Form onChange={this.onChange}>
-        <Form.label htmlFor="name">The animal name</Form.label>
+        <Form.Label htmlFor="name">The animal name</Form.Label>
         <br></br>
         <br></br>
         <Form.Control type="text" name="name" />
         <br></br>
-        <Form.label htmlFor="ownerName">The owner name</Form.label >
+        <Form.Label htmlFor="ownerName">The owner name</Form.Label >
         <br></br>
         <Form.Control  type="text" placeholder="your name" name="ownerName"/>
         <br></br>
-        <Form.label  htmlFor="image">image</Form.label >
+        <Form.Label  htmlFor="image">image</Form.Label >
         <br></br>
         <Form.Control type="text" placeholder="image url" name="imageUrl"/>
         <br></br>
-        <Form.label  htmlFor="description">description</Form.label >
+        <Form.Label  htmlFor="description">description</Form.Label >
         <br></br>
         <Form.Control
           htmlFor="description"
@@ -59,7 +59,7 @@ class PutAdoption extends React.Component {
           name="description"
         />
         <br></br>
-        <Form.label htmlFor="race">race</Form.label>
+        <Form.Label htmlFor="race">race</Form.Label>
         <br></br>
         <Form.Control
           htmlFor="race"
@@ -68,7 +68,7 @@ class PutAdoption extends React.Component {
           type="text"
         />
         <br></br>
-        <Form.label htmlFor="age">age</Form.label>
+        <Form.Label htmlFor="age">age</Form.Label>
         <br></br>
         <Form.Control htmlFor="age" name="age" placeholder="age" type="number"/>
         <br></br>
