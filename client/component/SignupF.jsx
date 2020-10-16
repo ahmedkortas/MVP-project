@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Button, Form } from "react-bootstrap";
 
 class SignupF extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class SignupF extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <Form>
           {" "}
           <label htmlFor="fname">firstName</label>
           <input
@@ -50,77 +51,77 @@ class SignupF extends React.Component {
             name="firstName"
             placeholder="name"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <label htmlFor="Sname">secondName</label>
+          <Form.label htmlFor="Sname">secondName</Form.label >
           <br></br>
-          <input
+          <Form.Control 
             type="text"
             name="secondName"
             placeholder="name"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <label htmlFor="password">password</label>
+          <Form.label  htmlFor="password">password</Form.label >
           <br></br>
-          <input
+          <Form.Control 
             type="password"
             name="password"
             placeholder="password"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <label htmlFor="adress">adress</label>
+          <Form.label  htmlFor="adress">adress</Form.label >
           <br></br>
-          <input
+          <Form.Control 
             type="text"
             name="adress"
             placeholder="adress"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <label htmlFor="email">email</label>
+          <Form.label  htmlFor="email">email</Form.label >
           <br></br>
-          <input
+          <Form.Control 
             type="email"
             name="email"
             placeholder="email"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <label htmlFor="birthday">birthday</label>
+          <Form.label  htmlFor="birthday">birthday</Form.label >
           <br></br>
-          <input
+          <Form.Control 
             type="date"
             name="birthday"
             placeholder="dd-mm-yyyy"
             min="1997-01-01"
             max="2030-12-31"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <label htmlFor="cardNumber">cardNumber</label>
+          <Form.label  htmlFor="cardNumber">cardNumber</Form.label >
           <br></br>
-          <input
+          <Form.Control 
             type="number"
             name="cardNumber"
             placeholder="cardNumber"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <label htmlFor="PhoneNumber">PhoneNumber</label>
+          <Form.label htmlFor="PhoneNumber">PhoneNumber</Form.label >
           <br></br>
-          <input
+          <Form.Control 
             type="number"
             name="PhoneNumber"
             placeholder="PhoneNumber"
             onChange={this.onChange}
-          ></input>
+          />
           <br></br>
-          <button type="submit" onClick={this.clickHandler}>
+          <Button type="submit" onClick={this.clickHandler}>
             Sign Up
-          </button>
-        </form>
+          </Button>
+        </Form>
       </div>
     );
   }
