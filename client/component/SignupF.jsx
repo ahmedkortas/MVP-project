@@ -42,16 +42,12 @@ class SignupF extends React.Component {
 
   render() {
     const styleForm ={
-      border:"1px solid rgba(0, 0, 0, 0.25);" ,
-      backgroundColor: "rgba(255, 255, 255, 0.5);",
-      padding: "10px;",
-      maxWidth: "100px;",
-      margin: "0 auto;",
-      textAlign: "center;",
-      height: "100px;",
-      lineHeight: "50px;",
-      display: "inline;",
-      width:'50%'
+      backgroundColor:'white;',
+      width:'300px',
+      borderRadius:'6px;',
+      margin:'0 auto 0 auto;',
+      padding:'0px 0px 70px 0px;',
+      border: '#2980b9 4px solid;'
     }
     const buttonForm ={
       marginRight:"5px;" ,

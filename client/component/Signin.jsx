@@ -36,13 +36,13 @@ class SigninF extends React.Component {
 
   render() {
     return (
-
-      <div class="container" style={{border:"1px solid black"}}>
-          <div class="row">
-                   <div class="col-md-5 mx-auto">
+ 
+      <div className="container" style={{border:"1px solid black"}}>
+          <div className="row">
+                   <div className="col-md-5 mx-auto">
                            <div id="first">
             
-                              <div class="col-md-12 text-center">
+                              <div className="col-md-12 text-center">
                                          <h1>Login</h1>
                               </div>
                             </div>
