@@ -1,5 +1,5 @@
 import React from "react";
-import { Card ,Button} from "react-bootstrap";
+import { Card ,Button, CardDeck} from "react-bootstrap";
 
 class Animal extends React.Component {
   constructor(props) {
@@ -16,8 +16,10 @@ class Animal extends React.Component {
    // );
    
       return(<div>
-      <Card className="mb-3" style={{ color :"#808080" ,marginButton:"15px"}}>
-      <Card.Img src={data.imageUrl} style={{ width: "600px", padding: "2px" ,height:"300px"}}/> 
+      
+      <Card className="mb-3" style={{ color :"#808080" ,marginButton:"15px" , width: '18rem'}}  >
+      <Card.Img src={data.imageUrl} style={{ width: "18rem", padding: "2px" ,height:"18rem" ,
+       backgroundColor:"aliceblue",border: '2px solid black' }}/> 
       <Card.Body> 
       <Card.Title> my name:{data.name} </Card.Title>
       <Card.Text> {data.description} </Card.Text>
@@ -25,6 +27,7 @@ class Animal extends React.Component {
       <Button variant="success"> Adopt </Button>
       </Card.Body>
       </Card>
+     
       </div>)
     
   }
