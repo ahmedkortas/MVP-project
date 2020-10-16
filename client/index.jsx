@@ -15,24 +15,20 @@ class App extends React.Component {
   }
 
   login(email) {
-    if (
-      localStorage.getItem("currentUser") === "undefined" ||
-      localStorage.getItem("currentUser") === null
-    ) {
-      if (email === undefined) {
-        return;
-      } else {
-        let userName = localStorage.getItem("currentUser");
+    let userName = localStorage.getItem("currentUser");
+    if (userName === "undefined" || userName === null) {
+      if (email !== undefined) {
         localStorage.setItem("currentUser", email);
-
         this.setState({
           currentUser: userName,
           view: "adopt",
         });
+      } else {
+        return;
       }
-    } else {
+    } else if (this.state.currentUser === "") {
       this.setState({
-        currentUser: localStorage.setItem("currentUser", email),
+        currentUser: userName,
         view: "adopt",
       });
     }
@@ -46,12 +42,6 @@ class App extends React.Component {
       this.setState({ view: options });
     }
   }
-
-  // localStorageLogin() {
-  //   if (localStorage.getItem("currentUser") === null) {
-  //     console.log("local storage is empty");
-  //   }
-  // }
 
   render() {
     this.login();
