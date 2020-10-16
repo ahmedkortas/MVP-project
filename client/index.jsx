@@ -10,28 +10,41 @@ class App extends React.Component {
     this.state = {
       view: "home",
       currentUser: "",
-      currentUserPassword: "",
     };
     this.login = this.login.bind(this);
   }
 
-  login(name, password) {
-    this.setState({
-      currentUser: name,
-      currentUserPassword: password,
-      view: "adopt",
-    });
+  login(email) {
+    let userName = localStorage.getItem("currentUser");
+    if (userName === "undefined" || userName === null) {
+      if (email !== undefined) {
+        localStorage.setItem("currentUser", email);
+        this.setState({
+          currentUser: userName,
+          view: "adopt",
+        });
+      } else {
+        return;
+      }
+    } else if (this.state.currentUser === "") {
+      this.setState({
+        currentUser: userName,
+        view: "adopt",
+      });
+    }
   }
 
   viewChange(options) {
     if (options === "logout") {
-      this.setState({ currentUser: "", currentUserPassword: "" });
+      this.setState({ currentUser: "" });
+      localStorage.clear();
     } else {
       this.setState({ view: options });
     }
   }
 
   render() {
+    this.login();
     return (
       <div>
         <div className="navbar">
