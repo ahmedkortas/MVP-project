@@ -1,6 +1,6 @@
 const express = require("express");
 let app = express();
-let PORT = 3000;
+let PORT = 3002;
 const pet = require("../database/Pet.js");
 const bodyParser = require("body-parser");
 const cors = require("cors");
