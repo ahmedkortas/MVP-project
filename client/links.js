@@ -1,6 +1,11 @@
 module.exports.items = [
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0avUjpFltsK38pdDb6OloMTNItMxRdRKZxg&usqp=CAU",
-  "https://lh3.googleusercontent.com/proxy/_SfEAmMQYJz-Jz8T-XT8LNlE6Evnki7rNcHtD8w0Dz_HUCCTw3GI8RXSD9rijP2elAfKKSevxPQ3y8X-WoAfu4h5V5PnRcgMUMLvfbt1eEOP19mlHY8uoEzgUqo5ZqTDlA",
-  "https://i.ytimg.com/vi/kzfNDIJ1QDU/maxresdefault.jpg",
-  "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg",
+
+  "https://images.unsplash.com/photo-1601758260679-259d3f79c9a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+  "https://images.unsplash.com/photo-1583090758875-4dc2d02c6c12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+  
+  "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+  "https://images.unsplash.com/photo-1601758066681-04e3557afaaa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+  "https://images.unsplash.com/photo-1522276498395-f4f68f7f8454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80",
+  "https://images.unsplash.com/photo-1601758123870-856824bb7a2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+  "https://images.unsplash.com/photo-1549221987-25a490f65d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
 ];

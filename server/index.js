@@ -1,6 +1,7 @@
 const express = require("express");
 let app = express();
-let PORT = 3000;
+let PORT =3000
+;
 const pet = require("../database/Pet.js");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -24,6 +25,13 @@ app.post("/api/user", (req, res) => {
   user.create(obj).then((user) => {
     str = JSON.stringify(user);
     res.send(str);
+  });
+});
+
+app.post("/api/adoption", (req, res) => {
+  console.log(req.body);
+  pet.findAndChange(req.body).then((obj) => {
+    res.send(obj);
   });
 });
 
