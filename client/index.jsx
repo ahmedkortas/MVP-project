@@ -102,7 +102,7 @@ class App extends React.Component {
             onClick={() => this.viewChange("putAdoption")}
           >
             {" "}
-            put For adoption
+             For adoption
           </span>
 
           {this.state.currentUser === "" ? (

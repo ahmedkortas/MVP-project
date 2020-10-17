@@ -3,6 +3,7 @@ import axios from "axios";
 import { Button, Form } from "react-bootstrap";
 
 class SignupF extends React.Component {
+
   constructor(props) {
     super(props);
     this.clickHandler = this.clickHandler.bind(this);
@@ -41,17 +42,25 @@ class SignupF extends React.Component {
   }
 
   render() {
+    const formContact={
+      display:'flex',
+      justifyContent:'center'
+    }
+    const inputContact={
+      width:"300px"
+    }
+    const formMain={
+      width: "340px",
+      border: "2px solid #bc007e",
+      padding: "20px"
+    }
     const styleForm ={
-      border:"1px solid rgba(0, 0, 0, 0.25);" ,
-      backgroundColor: "rgba(255, 255, 255, 0.5);",
-      padding: "10px;",
-      maxWidth: "100px;",
-      margin: "0 auto;",
-      textAlign: "center;",
-      height: "100px;",
-      lineHeight: "50px;",
-      display: "inline;",
-      width:'50%'
+      backgroundColor:'white;',
+      width:'300px',
+      borderRadius:'6px;',
+      margin:'0 auto 0 auto;',
+      padding:'0px 0px 70px 0px;',
+      border: '#2980b9 4px solid;'
     }
     const buttonForm ={
       marginRight:"5px;" ,
@@ -63,14 +72,14 @@ class SignupF extends React.Component {
       marginRight: "auto;"
     }
     return (
-      <div>
-        <Form className="form-1" style ={styleForm}> 
+      <div  style={formContact}>
+        <Form className="form-1" style ={styleForm,formMain}> 
         <div class="row">
           <div class="col-xs-12 col-md-offset-3">
-              <div class="col-md-12">
+              <div class="col-md-12 ">
            
-          <Form.Label htmlFor="fname" className="needs-validation" novalidate>firstName</Form.Label>
-          <Form.Control style ={styleForm}
+                  <Form.Label htmlFor="fname"  novalidate>firstName</Form.Label>
+                   <Form.Control style ={styleForm}
             type="text"
             name="firstName"
             placeholder="name"
@@ -98,7 +107,7 @@ class SignupF extends React.Component {
               <div class="col-md-12">
           <Form.Label htmlFor="password">password</Form.Label>
           <br></br>
-          <Form.Control
+          <Form.Control style={inputContact}
             type="password"
             name="password"
             placeholder="password"
@@ -113,7 +122,7 @@ class SignupF extends React.Component {
           <Form.Label htmlFor="adress">adress</Form.Label>
           <br></br>
         
-          <Form.Control
+          <Form.Control style={inputContact}
             type="text"
             name="adress"
             placeholder="adress"
@@ -126,7 +135,7 @@ class SignupF extends React.Component {
         <div class="col-md-12">
           <Form.Label htmlFor="email">email</Form.Label>
           <br></br>
-          <Form.Control
+          <Form.Control style={inputContact}
             type="email"
             name="email"
             placeholder="email"
@@ -139,7 +148,7 @@ class SignupF extends React.Component {
            <div class="col-md-12">
           <Form.Label htmlFor="birthday">birthday</Form.Label>
           <br></br>
-          <Form.Control
+          <Form.Control style={inputContact}
             type="date"
             name="birthday"
             max="2030-12-31"
@@ -154,7 +163,7 @@ class SignupF extends React.Component {
               <div class="col-md-12">
           <Form.Label htmlFor="cardNumber">cardNumber</Form.Label>
           <br></br>
-          <Form.Control
+          <Form.Control style={inputContact}
             type="number"
             name="cardNumber"
             placeholder="cardNumber"
@@ -168,7 +177,7 @@ class SignupF extends React.Component {
           <Form.Label htmlFor="PhoneNumber">PhoneNumber</Form.Label>
           <br></br>
        
-          <Form.Control
+          <Form.Control style={inputContact}
             type="number"
             name="PhoneNumber"
             placeholder="PhoneNumber"
