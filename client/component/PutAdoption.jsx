@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {Form , Button} from "react-bootstrap"
+import { Form, Button } from "react-bootstrap";
 class PutAdoption extends React.Component {
   constructor(props) {
     super(props);
@@ -33,21 +33,44 @@ class PutAdoption extends React.Component {
     e.preventDefault();
   }
   render() {
+
+    const formContact={
+      display:'flex',
+      justifyContent:'center'
+    }
+    const inputContact={
+      width:"300px"
+    }
+    const formMain={
+      width: "340px",
+      border: "2px solid #bc007e",
+      padding: "20px"
+    }
+    const styleForm ={
+      backgroundColor:'white;',
+      width:'300px',
+      borderRadius:'6px;',
+      margin:'0 auto 0 auto;',
+      padding:'0px 0px 70px 0px;',
+      border: '#2980b9 4px solid;'
+    }
+
     return (
-      <div>
-      <Form onChange={this.onChange}>
+      <div style={formContact}>
+
+      <Form onChange={this.onChange}  style ={styleForm,formMain}>
         <Form.Label htmlFor="name">The animal name</Form.Label>
         <br></br>
         <br></br>
-        <Form.Control type="text" name="name" />
+        <Form.Control type="text" name="name"  style ={styleForm}/>
         <br></br>
         <Form.Label htmlFor="ownerName">The owner name</Form.Label >
         <br></br>
-        <Form.Control  type="text" placeholder="your name" name="ownerName"/>
+        <Form.Control  type="text" placeholder="your name" name="ownerName" style ={styleForm}/>
         <br></br>
         <Form.Label  htmlFor="image">image</Form.Label >
         <br></br>
-        <Form.Control type="text" placeholder="image url" name="imageUrl"/>
+        <Form.Control type="text" placeholder="image url" name="imageUrl" style ={styleForm}/>
         <br></br>
         <Form.Label  htmlFor="description">description</Form.Label >
         <br></br>
@@ -66,6 +89,7 @@ class PutAdoption extends React.Component {
           name="race"
           placeholder="race"
           type="text"
+          style ={styleForm}
         />
         <br></br>
         <Form.Label htmlFor="age">age</Form.Label>
@@ -76,6 +100,7 @@ class PutAdoption extends React.Component {
           Submit
         </Button>
       </Form>
+
       </div>
     );
   }

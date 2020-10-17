@@ -35,36 +35,41 @@ class SigninF extends React.Component {
   }
 
   render() {
+
+    const formContact={
+      display:'flex',
+      justifyContent:'center'
+    }
+    const inputContact={
+      width:"400px",
+      display: "flex;",
+      justifySelf: "center;"
+    }
+    const formMain={
+      width: "600px",
+      border: "2px solid #bc007e",
+      padding: "60px"
+    }
     return (
  
-      <div className="container" style={{border:"1px solid black"}}>
-          <div className="row">
-                   <div className="col-md-5 mx-auto">
-                           <div id="first">
-            
-                              <div className="col-md-12 text-center">
-                                         <h1>Login</h1>
-                              </div>
-                            </div>
-                    </div>
-            </div>
-        
-        <Form>
+      <div className="container" style={formContact}>
+      
+        <Form style ={formMain}> 
           {" "}
-          <Form.Group as={Row} controlId="formPlaintextEmail">
+          <Form.Group as={Row} controlId="formPlaintextEmail"  style ={inputContact} >
           <Form.Label htmlFor="email">Email :</Form.Label>
           <Col col-md-12 text-center > 
-          <Form.Control
+          <Form.Control 
             type="email"
             name="email"
             placeholder="name"
             onChange={this.onChange}
-            style ={{width:'50%'}}
+           
           />
            </Col>  
              </Form.Group>
           <br></br>
-          <Form.Group as={Row} controlId="formPlaintextPassword">
+          <Form.Group as={Row} controlId="formPlaintextPassword" style ={inputContact}>
 
           <Form.Label  htmlFor="password">Password :</Form.Label>
           <Col  col-md-12 text-center >
@@ -73,7 +78,7 @@ class SigninF extends React.Component {
             name="password"
             placeholder="password"
             onChange={this.onChange}
-            style ={{width:'50%'}}
+            
 
           />
           </Col>
